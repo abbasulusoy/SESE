@@ -1,0 +1,12 @@
+hotel2018xp1
+https://www.db4free.net/phpMyAdmin/index.php
+
+Die Datenbank wurde erfolgreich erstellt.
+
+
+Datenbank: hotel2018xp1
+Benutzername: hotel2018xp1
+Email: abbasulusoy@hotmail.com
+
+
+Nach Bestätigung des folgenden Freischaltungs-Links, haben Sie Zugriff auf db4free.net's MySQL 8.0 Datenbank-Server. Um auf den Server zugreifen zu können, müssen Sie als Hostnamen db4free.net und als Port 3306 eingeben. Sie können auch phpMyAdmin auf unserer Website verwenden, um auf den Server zuzugreifen.

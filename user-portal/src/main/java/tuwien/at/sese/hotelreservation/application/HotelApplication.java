@@ -1,4 +1,4 @@
-package tuwien.at.sese.hotelreservation.customer;
+package tuwien.at.sese.hotelreservation.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

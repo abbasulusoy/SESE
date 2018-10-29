@@ -1,9 +1,13 @@
-package tuwien.at.sese.hotelreservation.customer;
+package tuwien.at.sese.hotelreservation.service.impl;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import tuwien.at.sese.hotelreservation.model.Customer;
+import tuwien.at.sese.hotelreservation.reprository.CustomerRepository;
+import tuwien.at.sese.hotelreservation.service.CustomerService;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {

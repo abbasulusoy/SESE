@@ -1,4 +1,4 @@
-package tuwien.at.sese.hotelreservation.customer;
+package tuwien.at.sese.hotelreservation.application;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

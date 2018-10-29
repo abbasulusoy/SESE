@@ -1,6 +1,8 @@
-package tuwien.at.sese.hotelreservation.customer;
+package tuwien.at.sese.hotelreservation.service;
 
 import java.util.List;
+
+import tuwien.at.sese.hotelreservation.model.Customer;
 
 public interface CustomerService {
 

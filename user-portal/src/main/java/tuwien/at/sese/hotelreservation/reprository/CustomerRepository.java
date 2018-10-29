@@ -1,8 +1,10 @@
-package tuwien.at.sese.hotelreservation.customer;
+package tuwien.at.sese.hotelreservation.reprository;
+
+import java.util.List;
 
 import org.springframework.data.repository.Repository;
 
-import java.util.List;
+import tuwien.at.sese.hotelreservation.model.Customer;
 
 public interface CustomerRepository extends Repository<Customer, Integer> {
 

@@ -1,12 +1,12 @@
-package com.devglan.userportal;
+package tuwien.at.sese.hotelreservation.customer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UserPortalApplication {
+public class HotelApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UserPortalApplication.class, args);
+		SpringApplication.run(HotelApplication.class, args);
 	}
 }

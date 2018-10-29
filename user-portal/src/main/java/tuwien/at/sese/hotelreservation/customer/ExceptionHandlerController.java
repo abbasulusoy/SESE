@@ -1,4 +1,4 @@
-package com.devglan.userportal;
+package tuwien.at.sese.hotelreservation.customer;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

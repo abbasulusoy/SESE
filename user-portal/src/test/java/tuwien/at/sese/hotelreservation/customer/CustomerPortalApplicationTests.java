@@ -1,4 +1,4 @@
-package com.devglan.userportal;
+package tuwien.at.sese.hotelreservation.customer;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class UserPortalApplicationTests {
+public class CustomerPortalApplicationTests {
 
 	@Test
 	public void contextLoads() {

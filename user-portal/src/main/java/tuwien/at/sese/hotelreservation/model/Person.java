@@ -3,11 +3,9 @@ package tuwien.at.sese.hotelreservation.model;
 import java.sql.Date;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.MappedSuperclass;
 
-@Entity
-@Table(name = "customer")
+@MappedSuperclass
 public class Person extends EntityId {
 
     @Column

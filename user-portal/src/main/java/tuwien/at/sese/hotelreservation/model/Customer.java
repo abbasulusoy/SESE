@@ -16,8 +16,10 @@ public class Customer extends Person {
     private String firmenname;
     @Column
     private String webadresse;
+    /**
     @Column
     private Address billAddress;
+    `**/
 
 
 }

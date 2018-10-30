@@ -6,7 +6,7 @@ package tuwien.at.sese.hotelreservation.model;
  * @author Abbas ULUSOY
  *
  */
-public class Address {
+public class Address extends EntityId{
 
     /** The bedeutung is not final because it has a setter. */
 

@@ -9,8 +9,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "reservation")
-public class Reservation {
-
+public class Reservation extends EntityId {
+	/**
     private List<Customer> customers = new ArrayList<>();
     private Room room;
     private String rabatt;
@@ -66,5 +66,5 @@ public class Reservation {
         this.duration = duration;
     }
 
-
+**/
 }

@@ -17,9 +17,9 @@ public class Newsletter extends EntityId {
     @Column
     private String name;
 
-    @OneToOne
+    /**
     private Address address;
-
+**/
     @Column
     private String subject;
 
@@ -33,10 +33,11 @@ public class Newsletter extends EntityId {
     public String getName() {
         return name;
     }
-
+/**
     public Address getAddress() {
         return address;
     }
+    **/
 
     public String getSubject() {
         return subject;
@@ -53,10 +54,11 @@ public class Newsletter extends EntityId {
     public void setName(String name) {
         this.name = name;
     }
-
+    /**
     public void setAddress(Address address) {
         this.address = address;
     }
+    **/
 
     public void setSubject(String subject) {
         this.subject = subject;

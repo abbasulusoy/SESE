@@ -4,67 +4,85 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "reservation")
 public class Reservation extends EntityId {
-	/**
-    private List<Customer> customers = new ArrayList<>();
-    private Room room;
-    private String rabatt;
-    private Date beginn;
-    private Date end;
-    private int duration;
 
-    public List<Customer> getCustomers() {
-        return customers;
-    }
+	@ManyToMany(mappedBy = "reservations", targetEntity = Customer.class)
+	private List<Customer> customers = new ArrayList<>();
+	
+	@ManyToOne(targetEntity = Room.class)
+    @JoinColumn(name = "room")
+	private Room room;
+	
+	@Column
+	private String rabatt;
+	
+	@Column
+	private Date beginnDate;
+	
+	@Column
+	private Date endDate;
+	
+	@Column
+	private int duration;
 
-    public Room getRoom() {
-        return room;
-    }
+	public List<Customer> getCustomers() {
+		return customers;
+	}
 
-    public String getRabatt() {
-        return rabatt;
-    }
+	public Room getRoom() {
+		return room;
+	}
 
-    public Date getBeginn() {
-        return beginn;
-    }
+	public String getRabatt() {
+		return rabatt;
+	}
 
-    public Date getEnd() {
-        return end;
-    }
+	
 
-    public int getDuration() {
-        return duration;
-    }
+	public int getDuration() {
+		return duration;
+	}
 
-    public void setCustomers(List<Customer> customers) {
-        this.customers = customers;
-    }
+	public void setCustomers(List<Customer> customers) {
+		this.customers = customers;
+	}
 
-    public void setRoom(Room room) {
-        this.room = room;
-    }
+	public void setRoom(Room room) {
+		this.room = room;
+	}
 
-    public void setRabatt(String rabatt) {
-        this.rabatt = rabatt;
-    }
+	public void setRabatt(String rabatt) {
+		this.rabatt = rabatt;
+	}
 
-    public void setBeginn(Date beginn) {
-        this.beginn = beginn;
-    }
+	
+	public Date getBeginnDate() {
+		return beginnDate;
+	}
 
-    public void setEnd(Date end) {
-        this.end = end;
-    }
+	public void setBeginnDate(Date beginnDate) {
+		this.beginnDate = beginnDate;
+	}
 
-    public void setDuration(int duration) {
-        this.duration = duration;
-    }
+	public Date getEndDate() {
+		return endDate;
+	}
 
-**/
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
+	}
+
+	public void setDuration(int duration) {
+		this.duration = duration;
+	}
+
 }

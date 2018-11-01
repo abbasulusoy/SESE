@@ -18,7 +18,6 @@ import tuwien.at.sese.hotelreservation.service.CustomerService;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-//@RequestMapping({"/api"})
 @RequestMapping({"/customers"})
 public class CustomerController {
 

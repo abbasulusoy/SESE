@@ -2,6 +2,8 @@ package tuwien.at.sese.hotelreservation.service.impl;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +12,7 @@ import tuwien.at.sese.hotelreservation.reprository.CustomerRepository;
 import tuwien.at.sese.hotelreservation.service.CustomerService;
 
 @Service
+@Transactional
 public class CustomerServiceImpl implements CustomerService {
 
     @Autowired

@@ -1,12 +1,16 @@
 package tuwien.at.sese.hotelreservation.model;
 
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+
 /**
  * Represents an address corresponding to the DB-entities like Adresse
  * 
  * @author Abbas ULUSOY
  *
  */
-public class Address extends EntityId{
+@Embeddable
+public class Address {
 
     /** The bedeutung is not final because it has a setter. */
 
@@ -15,6 +19,7 @@ public class Address extends EntityId{
     private String bezirk;
     private String strasse;
     private String hausnr;
+    private String tuerNr;
 
     public String getPostlandschl() {
         return postlandschl;
@@ -55,8 +60,18 @@ public class Address extends EntityId{
     public void setHausnr(String hausnr) {
         this.hausnr = hausnr;
     }
+    
+    
 
-    /**
+    public String getTuerNr() {
+		return tuerNr;
+	}
+
+	public void setTuerNr(String tuerNr) {
+		this.tuerNr = tuerNr;
+	}
+
+	/**
      * {@inheritDoc}
      *
      * All parameters which contain "real address information" are concatenated to a string.
@@ -68,6 +83,7 @@ public class Address extends EntityId{
         sb.append(postleitzahl).append(",");
         sb.append(strasse).append(",");
         sb.append(hausnr).append(",");
+        sb.append(tuerNr).append(",");
         return sb.toString();
     }
 }

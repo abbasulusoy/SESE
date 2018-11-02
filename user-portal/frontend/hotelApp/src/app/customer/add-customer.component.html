@@ -1,4 +1,5 @@
 <div class="col-md-6">
+  <h1 class="text-center">Reservation</h1>
   <h2 class="text-center">Add Customer</h2>
 <form>
   <div class="form-group">
@@ -17,16 +18,41 @@
   </div>
 
   <div class="form-group">
-    <label for="lastName">Last Name:</label>
-    <input [(ngModel)]="customer.lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+    <label for="geburtsdatum">Geburtdatum:</label>
+    <input [(ngModel)]="customer.geburtsdatum" placeholder="Geburts - Datum" name="geburtsdatum" class="form-control" id="geburtsdatum">
   </div>
 
 
   <div class="form-group">
-    <label for="lastName">Last Name:</label>
-    <input [(ngModel)]="customer.lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+    <label for="firmenname">Firmenname:</label>
+    <input [(ngModel)]="customer.firmenname" placeholder="Firmenname (Optional)" name="firmenname" class="form-control" id="firmenname">
   </div>
 
+
+  <div class="form-group">
+    <label for="firmenname">Firmenname:</label>
+    <input [(ngModel)]="customer.firmenname" placeholder="Firmenname (Optional)" name="firmenname" class="form-control" id="firmenname">
+  </div>
+
+  <div class="form-group">
+    <label for="firmenname">Notiz:</label>
+    <textarea [(ngModel)]="customer.notiz" placeholder="Notiz" name="notiz" class="form-control" id="notiz"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="Telefonnummer">Telefonnummer:</label>
+    <input type="email" [(ngModel)]="customer.email" placeholder="Email" name="email" class="form-control" id="email">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" [(ngModel)]="customer.email" placeholder="Email" name="email" class="form-control" id="email">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" [(ngModel)]="customer.email" placeholder="Email" name="email" class="form-control" id="email">
+  </div>
 
   <button class="btn btn-success" (click)="createCustomer()">Create</button>
 </form>

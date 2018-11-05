@@ -21,7 +21,7 @@ import tuwien.at.sese.hotelreservation.service.NewsletterService;
  */
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping({ "/Newsletters" })
+@RequestMapping({ "/newsletters" })
 public class NewsletterController {
 
     @Autowired

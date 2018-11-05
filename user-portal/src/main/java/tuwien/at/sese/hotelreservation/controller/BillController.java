@@ -20,9 +20,9 @@ import tuwien.at.sese.hotelreservation.service.BillService;
  * Bill crud operations
  *
  */
-@CrossOrigin(origins = "*", maxAge = 3600)
+@CrossOrigin(origins = "http://localhost:4200",  maxAge = 3600)
 @RestController
-@RequestMapping({ "/Bills" })
+@RequestMapping({ "/bills" })
 public class BillController {
 
     @Autowired

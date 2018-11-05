@@ -15,7 +15,6 @@ public class Room extends EntityId {
 	private String name;
 	private String number;
 	private int maxOccupancy;
-	private int child;
 	private double priceEZ;
 	
 	@OneToMany(targetEntity = Reservation.class, mappedBy = "room")
@@ -76,23 +75,7 @@ public class Room extends EntityId {
 		this.maxOccupancy = maxOccupancy;
 	}
 
-    /**
-     * Gets the child.
-     *
-     * @return the child
-     */
-	public int getChild() {
-		return child;
-	}
-
-    /**
-     * Sets the child.
-     *
-     * @param child the new child
-     */
-	public void setChild(int child) {
-		this.child = child;
-	}
+    
 
     /**
      * Gets the price EZ.
@@ -145,7 +128,7 @@ public class Room extends EntityId {
      * @return the price EZ mit two child
      */
 	public double getPriceEZMitTwoChild() {
-		return priceEZ + child * ((priceEZ * 100) / 25);
+		return priceEZ + maxOccupancy * ((priceEZ * 100) / 25);
 	}
 
     /**
@@ -154,7 +137,7 @@ public class Room extends EntityId {
      * @return the price DZ mit child
      */
 	public double getPriceDZMitChild() {
-		return getPriceDZ() + child * ((getPriceDZ() * 100) / 25);
+		return getPriceDZ() + maxOccupancy * ((getPriceDZ() * 100) / 25);
 	}
 	
 }

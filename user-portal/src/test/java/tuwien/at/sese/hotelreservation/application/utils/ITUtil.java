@@ -71,7 +71,7 @@ public class ITUtil {
      *
      * @return the room
      */
-    private static Room createDummyRoom() {
+    public static Room createDummyRoom() {
         Room room = new Room();
         room.setMaxOccupancy(4);
         room.setName("Room1");
@@ -85,7 +85,7 @@ public class ITUtil {
      *
      * @return the list
      */
-    private static List<Room> createDummyRooms() {
+    public static List<Room> createDummyRooms() {
         List<Room> rooms = new ArrayList<>();
         Room room = new Room();
         for (int i = 100; i < 150; i = i + 2) {

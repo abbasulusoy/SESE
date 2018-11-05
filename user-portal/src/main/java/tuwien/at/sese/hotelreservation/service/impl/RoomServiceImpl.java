@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import tuwien.at.sese.hotelreservation.model.Room;
-import tuwien.at.sese.hotelreservation.reprository.RoomRepository;
+import tuwien.at.sese.hotelreservation.repository.RoomRepository;
 import tuwien.at.sese.hotelreservation.service.RoomService;
 
 /**

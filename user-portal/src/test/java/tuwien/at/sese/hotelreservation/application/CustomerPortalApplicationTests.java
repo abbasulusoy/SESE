@@ -16,7 +16,7 @@ import tuwien.at.sese.hotelreservation.application.utils.ITUtil;
 import tuwien.at.sese.hotelreservation.model.Customer;
 import tuwien.at.sese.hotelreservation.model.Reservation;
 import tuwien.at.sese.hotelreservation.model.Room;
-import tuwien.at.sese.hotelreservation.reprository.CustomerRepository;
+import tuwien.at.sese.hotelreservation.repository.CustomerRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

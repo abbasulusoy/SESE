@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import tuwien.at.sese.hotelreservation.model.Newsletter;
-import tuwien.at.sese.hotelreservation.reprository.NewsletterRepository;
+import tuwien.at.sese.hotelreservation.repository.NewsletterRepository;
 import tuwien.at.sese.hotelreservation.service.NewsletterService;
 
 /**

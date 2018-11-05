@@ -1,12 +1,25 @@
-hotel2018xp1
-https://www.db4free.net/phpMyAdmin/index.php
+Postgressdatenbank :: hotel2018xp1
 
-Die Datenbank wurde erfolgreich erstellt.
+Backend::
+http://localhost:8080/portal/customers
+
+Frondend::
+http://localhost:4200
+
 
 
 Datenbank: hotel2018xp1
 Benutzername: hotel2018xp1
 Email: abbasulusoy@hotmail.com
 
+Abbas ULUSOY Work-Plan Days
+27.10.2018
+Project Setups 3 std
+28.10.2018
+Projects auf Githups 1Std
+29.10.2018
+Model Entity Mapping Hibernate Mapping 3std
+02.11.2018
+Create Services and Controller Repositories 3std
 
-Nach Bestätigung des folgenden Freischaltungs-Links, haben Sie Zugriff auf db4free.net's MySQL 8.0 Datenbank-Server. Um auf den Server zugreifen zu können, müssen Sie als Hostnamen db4free.net und als Port 3306 eingeben. Sie können auch phpMyAdmin auf unserer Website verwenden, um auf den Server zuzugreifen.
+

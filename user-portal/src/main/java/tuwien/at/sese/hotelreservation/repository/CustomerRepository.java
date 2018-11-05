@@ -1,4 +1,4 @@
-package tuwien.at.sese.hotelreservation.reprository;
+package tuwien.at.sese.hotelreservation.repository;
 
 import java.util.List;
 

@@ -46,7 +46,6 @@ public class CustomerPortalApplicationTests {
 		Room room = new Room();
 		room.setName("alex");
 		room.setNumber("100");
-		room.setChild(1);
 		room.setMaxOccupancy(2);
 		room.setPriceEZ(100.00);
 		

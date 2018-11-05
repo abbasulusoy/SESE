@@ -1,14 +1,24 @@
 package tuwien.at.sese.hotelreservation.exception;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
-
+/**
+ * The Class ExceptionHandlerController.
+ */
 @ControllerAdvice
 public class ExceptionHandlerController {
 
+    /**
+     * Handle error.
+     *
+     * @param req the req
+     * @param ex the ex
+     * @return the model and view
+     */
     @ExceptionHandler({Exception.class, RuntimeException.class})
     public ModelAndView handleError(HttpServletRequest req, Exception ex) {
         System.out.println(req.getRequestURL());

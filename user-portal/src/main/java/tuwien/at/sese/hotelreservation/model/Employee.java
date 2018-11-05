@@ -2,7 +2,14 @@ package tuwien.at.sese.hotelreservation.model;
 
 import javax.persistence.Column;
 
+/**
+ * The Class Employee.
+ */
 public class Employee extends Person {
+
+    /**
+     * TODO
+     */
 
     @Column
     private String employeeNumber;
@@ -17,4 +24,5 @@ public class Employee extends Person {
     private String taskArea;
     @Column
     private Address address;
+
 }

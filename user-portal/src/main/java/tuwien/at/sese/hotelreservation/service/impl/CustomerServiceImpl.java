@@ -11,6 +11,11 @@ import tuwien.at.sese.hotelreservation.model.Customer;
 import tuwien.at.sese.hotelreservation.reprository.CustomerRepository;
 import tuwien.at.sese.hotelreservation.service.CustomerService;
 
+/**
+ * @author Abbas ULUSOY
+ * crud operation for customers and list 
+ *
+ */
 @Service
 @Transactional
 public class CustomerServiceImpl implements CustomerService {
@@ -18,11 +23,17 @@ public class CustomerServiceImpl implements CustomerService {
     @Autowired
     private CustomerRepository repository;
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Customer create(Customer customer) {
         return repository.save(customer);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Customer delete(int id) {
         Customer customer = findById(id);
@@ -32,16 +43,25 @@ public class CustomerServiceImpl implements CustomerService {
         return customer;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public List<Customer> findAll() {
         return repository.findAll();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Customer findById(int id) {
         return repository.findOne(id);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Customer update(Customer customer) {
         return repository.save(customer);

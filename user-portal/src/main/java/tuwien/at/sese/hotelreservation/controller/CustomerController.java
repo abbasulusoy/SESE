@@ -37,22 +37,46 @@ public class CustomerController {
         return customerService.create(customer);
     }
 
+    /**
+     * Find one.
+     *
+     * @param id the id
+     * @return the customer
+     */
     @GetMapping(path = {"/{id}"})
     public Customer findOne(@PathVariable("id") int id){
         return customerService.findById(id);
     }
 
+    /**
+     * Update.
+     *
+     * @param id the id
+     * @param customer the customer
+     * @return the customer
+     */
     @PutMapping(path = {"/{id}"})
     public Customer update(@PathVariable("id") int id, @RequestBody Customer customer){
         customer.setId(id);
         return customerService.update(customer);
     }
 
+    /**
+     * Delete.
+     *
+     * @param id the id
+     * @return the customer
+     */
     @DeleteMapping(path ={"/{id}"})
     public Customer delete(@PathVariable("id") int id) {
         return customerService.delete(id);
     }
 
+    /**
+     * Find all.
+     *
+     * @return the list
+     */
     @GetMapping
     public List<Customer> findAll(){
         return customerService.findAll();

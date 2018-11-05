@@ -1,7 +1,6 @@
 package tuwien.at.sese.hotelreservation.model;
 
 import javax.persistence.Embeddable;
-import javax.persistence.Entity;
 
 /**
  * Represents an address corresponding to the DB-entities like Adresse
@@ -21,52 +20,88 @@ public class Address {
     private String hausnr;
     private String tuerNr;
 
+    /**
+     * @return postlandschl
+     */
     public String getPostlandschl() {
         return postlandschl;
     }
 
+    /**
+     * @return postleitzahl
+     */
     public String getPostleitzahl() {
         return postleitzahl;
     }
 
+    /**
+     * @return bezirk
+     */
     public String getBezirk() {
         return bezirk;
     }
 
+    /**
+     * @return strasse
+     */
     public String getStrasse() {
         return strasse;
     }
 
+    /**
+     * @return hausnr
+     */
     public String getHausnr() {
         return hausnr;
     }
 
+    /**
+     * @param postlandschl
+     */
     public void setPostlandschl(String postlandschl) {
         this.postlandschl = postlandschl;
     }
 
+    /**
+     * @param postleitzahl
+     */
     public void setPostleitzahl(String postleitzahl) {
         this.postleitzahl = postleitzahl;
     }
 
+    /**
+     * @param bezirk
+     */
     public void setBezirk(String bezirk) {
         this.bezirk = bezirk;
     }
 
+    /**
+     * @param strasse
+     */
     public void setStrasse(String strasse) {
         this.strasse = strasse;
     }
 
+    /**
+     * @param hausnr
+     */
     public void setHausnr(String hausnr) {
         this.hausnr = hausnr;
     }
     
     
 
+    /**
+     * @return tuerNr
+     */
     public String getTuerNr() {
 		return tuerNr;
 	}
 
+    /**
+     * @param tuerNr
+     */
 	public void setTuerNr(String tuerNr) {
 		this.tuerNr = tuerNr;
 	}

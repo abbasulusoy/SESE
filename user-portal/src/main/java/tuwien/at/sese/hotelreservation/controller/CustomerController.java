@@ -16,6 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 import tuwien.at.sese.hotelreservation.model.Customer;
 import tuwien.at.sese.hotelreservation.service.CustomerService;
 
+/**
+ * Customers
+ *
+ */
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping({"/customers"})
@@ -24,6 +28,10 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
+    /**
+     * @param customer
+     * @return Customer
+     */
     @PostMapping
     public Customer create(@RequestBody Customer customer){
         return customerService.create(customer);

@@ -35,7 +35,7 @@ public class CustomerServiceImpl implements CustomerService {
      * {@inheritDoc}
      */
     @Override
-    public Customer delete(int id) {
+    public Customer delete(Long id) {
         Customer customer = findById(id);
         if(customer != null){
             repository.delete(customer);
@@ -55,8 +55,8 @@ public class CustomerServiceImpl implements CustomerService {
      * {@inheritDoc}
      */
     @Override
-    public Customer findById(int id) {
-        return repository.findOne(id);
+    public Customer findById(Long id) {
+        return repository.findById(id);
     }
 
     /**

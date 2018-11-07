@@ -25,7 +25,7 @@
 //     * @param id the id
 //     * @return the employee
 //     */
-//    Employee delete(int id);
+//    Employee delete(Long id);
 //
 //    /**
 //     * Find all.
@@ -40,7 +40,7 @@
 //     * @param id the id
 //     * @return the employee
 //     */
-//    Employee findById(int id);
+//    Employee findById(Long id);
 //
 //    /**
 //     * Update.

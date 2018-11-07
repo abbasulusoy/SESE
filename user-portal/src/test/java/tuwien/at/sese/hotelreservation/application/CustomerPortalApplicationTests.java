@@ -17,12 +17,8 @@ import tuwien.at.sese.hotelreservation.model.Customer;
 import tuwien.at.sese.hotelreservation.model.Reservation;
 import tuwien.at.sese.hotelreservation.model.Room;
 import tuwien.at.sese.hotelreservation.repository.CustomerRepository;
-<<<<<<< HEAD
 import tuwien.at.sese.hotelreservation.repository.ReservationRepository;
 import tuwien.at.sese.hotelreservation.repository.RoomRepository;
-=======
->>>>>>> branch 'master' of https://github.com/abbasulusoy/SESE.git
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @EnableJpaRepositories(basePackages = "tuwien.at.sese.hotelreservation.reprository")

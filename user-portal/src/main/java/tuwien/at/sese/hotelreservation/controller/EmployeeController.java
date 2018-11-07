@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-
 //package tuwien.at.sese.hotelreservation.controller;
 //
 //import java.util.List;
@@ -26,7 +23,6 @@
 // *
 // */
 //@CrossOrigin(origins = "http://localhost:4200",  maxAge = 3600)
-=======
 //package tuwien.at.sese.hotelreservation.controller;
 //
 //import java.util.List;
@@ -49,8 +45,7 @@
 // * Employees
 // *
 // */
-//@CrossOrigin(origins = "*", maxAge = 3600)
->>>>>>> branch 'master' of https://github.com/abbasulusoy/SESE.git
+//@CrossOrigin(origins = "*", maxAge = 3600)//github.com/abbasulusoy/SESE.git
 //@RestController
 //@RequestMapping({ "/employees" })
 //public class EmployeeController {
@@ -74,7 +69,7 @@
 //     * @return the employee
 //     */
 //    @GetMapping(path = {"/{id}"})
-//    public Employee findOne(@PathVariable("id") int id) {
+//    public Employee findOne(@PathVariable("id") Long id) {
 //        return EmployeeService.findById(id);
 //    }
 //
@@ -86,7 +81,7 @@
 //     * @return the employee
 //     */
 //    @PutMapping(path = {"/{id}"})
-//    public Employee update(@PathVariable("id") int id, @RequestBody Employee Employee) {
+//    public Employee update(@PathVariable("id") Long id, @RequestBody Employee Employee) {
 //        Employee.setId(id);
 //        return EmployeeService.update(Employee);
 //    }
@@ -98,7 +93,7 @@
 //     * @return the employee
 //     */
 //    @DeleteMapping(path ={"/{id}"})
-//    public Employee delete(@PathVariable("id") int id) {
+//    public Employee delete(@PathVariable("id") Long id) {
 //        return EmployeeService.delete(id);
 //    }
 //

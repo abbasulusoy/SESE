@@ -31,7 +31,7 @@ public class RoomServiceImpl implements RoomService {
      * {@inheritDoc}
      */
     @Override
-    public Room delete(int id) {
+    public Room delete(Long id) {
         Room room = findById(id);
         if (room != null) {
             repository.delete(room);
@@ -51,8 +51,8 @@ public class RoomServiceImpl implements RoomService {
      * {@inheritDoc}
      */
     @Override
-    public Room findById(int id) {
-        return repository.findOne(id);
+    public Room findById(Long id) {
+        return repository.findById(id);
     }
 
     /**

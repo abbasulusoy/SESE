@@ -31,7 +31,7 @@ public class StatistikServiceImpl implements StatistikService {
      * {@inheritDoc}
      */
     @Override
-    public Statistik delete(int id) {
+    public Statistik delete(Long id) {
         Statistik statistik = findById(id);
         if (statistik != null) {
             repository.delete(statistik);
@@ -51,8 +51,8 @@ public class StatistikServiceImpl implements StatistikService {
      * {@inheritDoc}
      */
     @Override
-    public Statistik findById(int id) {
-        return repository.findOne(id);
+    public Statistik findById(Long id) {
+        return repository.findById(id);
     }
 
     /**

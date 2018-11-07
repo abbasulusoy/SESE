@@ -31,7 +31,7 @@ public class BillServiceImpl implements BillService {
      * {@inheritDoc}
      */
     @Override
-    public Bill delete(int id) {
+    public Bill delete(Long id) {
         Bill Bill = findById(id);
         if (Bill != null) {
             repository.delete(Bill);
@@ -51,8 +51,8 @@ public class BillServiceImpl implements BillService {
      * {@inheritDoc}
      */
     @Override
-    public Bill findById(int id) {
-        return repository.findOne(id);
+    public Bill findById(Long id) {
+        return repository.findById(id);
     }
 
     /**

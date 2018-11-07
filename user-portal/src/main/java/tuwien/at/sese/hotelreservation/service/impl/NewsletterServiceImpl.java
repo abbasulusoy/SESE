@@ -31,7 +31,7 @@ public class NewsletterServiceImpl implements NewsletterService {
      * {@inheritDoc}
      */
     @Override
-    public Newsletter delete(int id) {
+    public Newsletter delete(Long id) {
         Newsletter newsletter = findById(id);
         if (newsletter != null) {
             repository.delete(newsletter);
@@ -51,8 +51,8 @@ public class NewsletterServiceImpl implements NewsletterService {
      * {@inheritDoc}
      */
     @Override
-    public Newsletter findById(int id) {
-        return repository.findOne(id);
+    public Newsletter findById(Long id) {
+        return repository.findById(id);
     }
 
     /**

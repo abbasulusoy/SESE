@@ -42,7 +42,7 @@ public class StatistikController {
      * @return the statistik
      */
     @GetMapping(path = {"/{id}"})
-    public Statistik findOne(@PathVariable("id") int id) {
+    public Statistik findOne(@PathVariable("id") Long id) {
         return statistikService.findById(id);
     }
 
@@ -54,7 +54,7 @@ public class StatistikController {
      * @return the statistik
      */
     @PutMapping(path = {"/{id}"})
-    public Statistik update(@PathVariable("id") int id, @RequestBody Statistik statistik) {
+    public Statistik update(@PathVariable("id") Long id, @RequestBody Statistik statistik) {
         statistik.setId(id);
         return statistikService.update(statistik);
     }
@@ -66,7 +66,7 @@ public class StatistikController {
      * @return the statistik
      */
     @DeleteMapping(path ={"/{id}"})
-    public Statistik delete(@PathVariable("id") int id) {
+    public Statistik delete(@PathVariable("id") Long id) {
         return statistikService.delete(id);
     }
 

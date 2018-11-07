@@ -44,7 +44,7 @@ public class CustomerController {
      * @return the customer
      */
     @GetMapping(path = {"/{id}"})
-    public Customer findOne(@PathVariable("id") int id){
+    public Customer findOne(@PathVariable("id") Long id){
         return customerService.findById(id);
     }
 
@@ -56,7 +56,7 @@ public class CustomerController {
      * @return the customer
      */
     @PutMapping(path = {"/{id}"})
-    public Customer update(@PathVariable("id") int id, @RequestBody Customer customer){
+    public Customer update(@PathVariable("id") Long id, @RequestBody Customer customer){
         customer.setId(id);
         return customerService.update(customer);
     }
@@ -68,7 +68,7 @@ public class CustomerController {
      * @return the customer
      */
     @DeleteMapping(path ={"/{id}"})
-    public Customer delete(@PathVariable("id") int id) {
+    public Customer delete(@PathVariable("id") Long id) {
         return customerService.delete(id);
     }
 

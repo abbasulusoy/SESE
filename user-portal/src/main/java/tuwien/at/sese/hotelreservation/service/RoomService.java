@@ -5,7 +5,7 @@ import java.util.List;
 import tuwien.at.sese.hotelreservation.model.Room;
 
 /**
- * The Interface RoomService.
+ * The interface RoomService.
  */
 public interface RoomService {
 
@@ -24,7 +24,7 @@ public interface RoomService {
      * @return the room
      * 
      */
-    Room delete(int id);
+    Room delete(Long id);
 
     /**
      * Find all.
@@ -39,7 +39,7 @@ public interface RoomService {
      * @param id the id
      * @return the room
      */
-    Room findById(int id);
+    Room findById(Long id);
 
     /**
      * Update.

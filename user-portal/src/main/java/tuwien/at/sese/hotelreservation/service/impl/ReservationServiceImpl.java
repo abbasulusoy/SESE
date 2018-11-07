@@ -31,7 +31,7 @@ public class ReservationServiceImpl implements ReservationService {
      * {@inheritDoc}
      */
     @Override
-    public Reservation delete(int id) {
+    public Reservation delete(Long id) {
         Reservation reservation = findById(id);
         if(reservation != null){
             repository.delete(reservation);
@@ -51,8 +51,8 @@ public class ReservationServiceImpl implements ReservationService {
      * {@inheritDoc}
      */
     @Override
-    public Reservation findById(int id) {
-        return repository.findOne(id);
+    public Reservation findById(Long id) {
+        return repository.findById(id);
     }
 
     /**

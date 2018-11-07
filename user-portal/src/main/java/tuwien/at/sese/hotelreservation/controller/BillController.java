@@ -42,7 +42,7 @@ public class BillController {
      * @return found Bill
      */
     @GetMapping(path = {"/{id}"})
-    public Bill findOne(@PathVariable("id") int id) {
+    public Bill findOne(@PathVariable("id") Long id) {
         return billService.findById(id);
     }
 
@@ -52,7 +52,7 @@ public class BillController {
      * @return updated Bill
      */
     @PutMapping(path = {"/{id}"})
-    public Bill update(@PathVariable("id") int id, @RequestBody Bill bill) {
+    public Bill update(@PathVariable("id") Long id, @RequestBody Bill bill) {
         bill.setId(id);
         return billService.update(bill);
     }
@@ -62,7 +62,7 @@ public class BillController {
      * @return deleted Bill
      */
     @DeleteMapping(path ={"/{id}"})
-    public Bill delete(@PathVariable("id") int id) {
+    public Bill delete(@PathVariable("id") Long id) {
         return billService.delete(id);
     }
 

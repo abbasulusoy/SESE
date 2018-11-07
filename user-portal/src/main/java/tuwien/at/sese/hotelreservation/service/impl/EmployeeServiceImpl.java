@@ -31,7 +31,7 @@
 //     * {@inheritDoc}
 //     */
 //    @Override
-//    public Employee delete(int id) {
+//    public Employee delete(Long id) {
 //        Employee Employee = findById(id);
 //        if (Employee != null) {
 //            repository.delete(Employee);
@@ -51,7 +51,7 @@
 //     * {@inheritDoc}
 //     */
 //    @Override
-//    public Employee findById(int id) {
+//    public Employee findById(Long id) {
 //        return repository.findOne(id);
 //    }
 //

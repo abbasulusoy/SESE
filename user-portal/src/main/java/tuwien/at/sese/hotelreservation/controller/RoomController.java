@@ -45,7 +45,7 @@ public class RoomController {
      * @return the room
      */
     @GetMapping(path = {"/{id}"})
-    public Room findOne(@PathVariable("id") int id) {
+    public Room findOne(@PathVariable("id") Long id) {
         return roomService.findById(id);
     }
 
@@ -57,7 +57,7 @@ public class RoomController {
      * @return the room
      */
     @PutMapping(path = {"/{id}"})
-    public Room update(@PathVariable("id") int id, @RequestBody Room room) {
+    public Room update(@PathVariable("id") Long id, @RequestBody Room room) {
         room.setId(id);
         return roomService.update(room);
     }
@@ -69,7 +69,7 @@ public class RoomController {
      * @return the room
      */
     @DeleteMapping(path ={"/{id}"})
-    public Room delete(@PathVariable("id") int id) {
+    public Room delete(@PathVariable("id") Long id) {
         return roomService.delete(id);
     }
 

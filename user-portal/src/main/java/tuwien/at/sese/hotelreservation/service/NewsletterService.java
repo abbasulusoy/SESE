@@ -5,7 +5,7 @@ import java.util.List;
 import tuwien.at.sese.hotelreservation.model.Newsletter;
 
 /**
- * The Interface NewsletterService.
+ * The interface NewsletterService.
  */
 public interface NewsletterService {
 
@@ -23,7 +23,7 @@ public interface NewsletterService {
      * @param id the id
      * @return the newsletter
      */
-    Newsletter delete(int id);
+    Newsletter delete(Long id);
 
     /**
      * Find all.
@@ -38,7 +38,7 @@ public interface NewsletterService {
      * @param id the id
      * @return the newsletter
      */
-    Newsletter findById(int id);
+    Newsletter findById(Long id);
 
     /**
      * Update.

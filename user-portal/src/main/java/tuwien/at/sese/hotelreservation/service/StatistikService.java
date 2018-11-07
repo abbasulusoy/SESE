@@ -23,7 +23,7 @@ public interface StatistikService {
      * @param id the id
      * @return the statistik
      */
-    Statistik delete(int id);
+    Statistik delete(Long id);
 
     /**
      * Find all.
@@ -38,7 +38,7 @@ public interface StatistikService {
      * @param id the id
      * @return the statistik
      */
-    Statistik findById(int id);
+    Statistik findById(Long id);
 
     /**
      * Update.

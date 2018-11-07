@@ -9,7 +9,7 @@ import tuwien.at.sese.hotelreservation.model.Newsletter;
 /**
  * The Interface NewsletterRepository.
  */
-public interface NewsletterRepository extends Repository<Newsletter, Integer> {
+public interface NewsletterRepository extends Repository<Newsletter, Long> {
 
     /**
      * Delete.
@@ -31,7 +31,7 @@ public interface NewsletterRepository extends Repository<Newsletter, Integer> {
      * @param id the id
      * @return the newsletter
      */
-    Newsletter findOne(int id);
+    Newsletter findById(Long id);
 
     /**
      * Save.

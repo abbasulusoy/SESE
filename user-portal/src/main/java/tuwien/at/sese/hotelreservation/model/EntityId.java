@@ -15,14 +15,14 @@ public class EntityId {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     /**
      * Gets the id.
      *
      * @return the id
      */
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
@@ -31,7 +31,7 @@ public class EntityId {
      *
      * @param id the new id
      */
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

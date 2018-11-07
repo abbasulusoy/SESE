@@ -45,7 +45,7 @@ public class NewsletterController {
      * @return the newsletter
      */
     @GetMapping(path = {"/{id}"})
-    public Newsletter findOne(@PathVariable("id") int id) {
+    public Newsletter findOne(@PathVariable("id") Long id) {
         return NewsletterService.findById(id);
     }
 
@@ -57,7 +57,7 @@ public class NewsletterController {
      * @return the newsletter
      */
     @PutMapping(path = {"/{id}"})
-    public Newsletter update(@PathVariable("id") int id, @RequestBody Newsletter Newsletter) {
+    public Newsletter update(@PathVariable("id") Long id, @RequestBody Newsletter Newsletter) {
         Newsletter.setId(id);
         return NewsletterService.update(Newsletter);
     }
@@ -69,7 +69,7 @@ public class NewsletterController {
      * @return the newsletter
      */
     @DeleteMapping(path ={"/{id}"})
-    public Newsletter delete(@PathVariable("id") int id) {
+    public Newsletter delete(@PathVariable("id") Long id) {
         return NewsletterService.delete(id);
     }
 

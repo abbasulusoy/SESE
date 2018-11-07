@@ -45,7 +45,7 @@ public class ReservationController {
      * @return the reservation
      */
     @GetMapping(path = {"/{id}"})
-    public Reservation findOne(@PathVariable("id") int id){
+    public Reservation findOne(@PathVariable("id") Long id){
         return reservationService.findById(id);
     }
 
@@ -57,7 +57,7 @@ public class ReservationController {
      * @return the reservation
      */
     @PutMapping(path = {"/{id}"})
-    public Reservation update(@PathVariable("id") int id, @RequestBody Reservation reservation){
+    public Reservation update(@PathVariable("id") Long id, @RequestBody Reservation reservation){
         reservation.setId(id);
         return reservationService.update(reservation);
     }
@@ -69,7 +69,7 @@ public class ReservationController {
      * @return the reservation
      */
     @DeleteMapping(path ={"/{id}"})
-    public Reservation delete(@PathVariable("id") int id) {
+    public Reservation delete(@PathVariable("id") Long id) {
         return reservationService.delete(id);
     }
 

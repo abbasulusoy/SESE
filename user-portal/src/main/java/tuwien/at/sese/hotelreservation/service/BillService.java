@@ -20,7 +20,7 @@ public interface BillService {
      * @param id
      * @return deleted bill
      */
-    Bill delete(int id);
+    Bill delete(Long id);
 
     /**
      * @return all bills
@@ -31,7 +31,7 @@ public interface BillService {
      * @param id
      * @return found bill
      */
-    Bill findById(int id);
+    Bill findById(Long id);
 
     /**
      * @param bill

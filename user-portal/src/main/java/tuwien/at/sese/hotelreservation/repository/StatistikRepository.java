@@ -9,7 +9,7 @@ import tuwien.at.sese.hotelreservation.model.Statistik;
 /**
  * The Interface StatistikRepository.
  */
-public interface StatistikRepository extends Repository<Statistik, Integer> {
+public interface StatistikRepository extends Repository<Statistik, Long> {
 
     /**
      * Delete.
@@ -31,7 +31,7 @@ public interface StatistikRepository extends Repository<Statistik, Integer> {
      * @param id the id
      * @return the statistik
      */
-    Statistik findOne(int id);
+    Statistik findById(Long id);
 
     /**
      * Save.

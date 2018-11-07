@@ -9,7 +9,7 @@ import tuwien.at.sese.hotelreservation.model.Reservation;
 /**
  * The Interface ReservationRepository.
  */
-public interface ReservationRepository extends Repository<Reservation, Integer> {
+public interface ReservationRepository extends Repository<Reservation, Long> {
 
     /**
      * Delete.
@@ -31,7 +31,7 @@ public interface ReservationRepository extends Repository<Reservation, Integer> 
      * @param id the id
      * @return the reservation
      */
-    Reservation findOne(int id);
+    Reservation findById(Long id);
 
     /**
      * Save.

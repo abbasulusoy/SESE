@@ -21,7 +21,7 @@ public interface CustomerService {
      * @param id
      * @return deleted customer
      */
-    Customer delete(int id);
+    Customer delete(Long id);
 
     /**
      * @return list of customer 
@@ -32,7 +32,7 @@ public interface CustomerService {
      * @param id
      * @return found customer
      */
-    Customer findById(int id);
+    Customer findById(Long id);
 
     /**
      * @param customer

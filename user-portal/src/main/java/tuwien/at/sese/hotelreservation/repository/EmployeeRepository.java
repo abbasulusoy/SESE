@@ -9,7 +9,7 @@
 ///**
 // * The Interface EmployeeRepository.
 // */
-//public interface EmployeeRepository extends Repository<Employee, Integer> {
+//public interface EmployeeRepository extends Repository<Employee, Long> {
 //
 //    /**
 //     * Delete.
@@ -31,7 +31,7 @@
 //     * @param id the id
 //     * @return the employee
 //     */
-//    Employee findOne(int id);
+//    Employee findById(Long id);
 //
 //    /**
 //     * Save.

@@ -22,7 +22,7 @@ import tuwien.at.sese.hotelreservation.service.CustomerService;
  */
 @CrossOrigin(origins = "http://localhost:4200",  maxAge = 3600)
 @RestController
-@RequestMapping({"/customers"})
+@RequestMapping("/customers")
 public class CustomerController {
 
     @Autowired
@@ -43,6 +43,7 @@ public class CustomerController {
      * @param id the id
      * @return the customer
      */
+    
     @GetMapping(path = {"/{id}"})
     public Customer findOne(@PathVariable("id") Long id){
         return customerService.findById(id);

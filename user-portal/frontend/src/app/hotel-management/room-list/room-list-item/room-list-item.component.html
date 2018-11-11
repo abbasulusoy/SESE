@@ -1,4 +1,4 @@
-<div class="row room-list-item">
+<div class="row room-list-item rounded" (click)="onShowRoomDetails(room)">
   <div class="col-lg-3">
     <img class="card-img-top room-list-item-picture" src="{{room.mainPicture}}" alt="Card image cap">
   </div>
@@ -12,7 +12,7 @@
   </div>
   <div class="col-lg-2 room-list-item-details">
     <h5 class="room-list-item-price">{{room.price | currency:'EUR'}}</h5>
-    <button type="button" class="btn btn-success room-list-item-reserve" (click)="onReserveRoom(room.id)">
+    <button type="button" class="btn btn-success room-list-item-reserve" (click)="$event.stopPropagation();onReserveRoom(room.id)">
       Reservieren
     </button>
   </div>

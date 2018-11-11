@@ -1,3 +1,44 @@
-<p>
-  room-detail works!
-</p>
+<button type="button" class="btn btn-sm btn-outline-secondary" routerLink="/roomlist">
+  Zurück zu Liste
+</button>
+<br/>
+<br/>
+<div *ngIf="room" class="card">
+  <h5 class="card-header">
+    {{room.name}}
+    <span class="float-right" style="color: #660000">{{room.price | currency:'EUR'}}</span>
+  </h5>
+  <div class="card-body">
+    <h5 class="card-title row">
+      <div class="col-lg-3">
+        {{room.type}}
+        <span>für max {{room.capacity}} Person(en)</span>
+      </div>
+      <div class="col-lg-6">
+        Beschreibung
+      </div>
+      <div class="col-lg-3">
+        Ausstatung
+      </div>
+    </h5>
+    <div class="card-text row">
+      <div class="col-lg-3">
+        <img class="card-img-top" src="{{room.mainPicture}}" alt="Card image cap">
+      </div>
+      <div class="col-lg-6">
+        {{room.description}}
+      </div>
+      <div class="col-lg-3">
+        - King-size Bett<br/>
+        - Badewanne<br/>
+        - TV<br/>
+      </div>
+    </div>
+    <div class="row">
+      <button type="button" class="btn btn-success col-lg-2 offset-lg-10"
+              (click)="$event.stopPropagation();onReserveRoom(room.id)">
+        Reservieren
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Room} from "../models/room";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'room-list-item',
@@ -11,9 +12,13 @@ export class RoomListItemComponent implements OnInit {
   @Input()
   private room: Room;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  onShowRoomDetails(selectedRoom: Room) {
+    this.router.navigate(['roomdetail/' + selectedRoom.id], {});
   }
 
   onReserveRoom(selectedRoomId: number) {

@@ -11,10 +11,6 @@ const routes: Routes = [
   {path: 'add', component: AddCustomerComponent},
   {path: 'home', component: HomeComponent},
   {path: 'contact', component: ContactComponent},
-  {
-    path: 'management',
-    loadChildren: 'hotel-management.module#HotelManagementModule'
-  },
 ];
 
 @NgModule({

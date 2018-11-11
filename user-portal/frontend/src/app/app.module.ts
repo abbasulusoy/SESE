@@ -12,6 +12,7 @@ import { UiModule } from './ui/ui.module';
 import { ContactComponent } from './contact/contact.component';
 import { HotelManagementModule } from './hotel-management/hotel-management.module';
 import { HomeComponent } from './home/home.component';
+import {AlertModule, ModalModule, PopoverModule} from "ngx-bootstrap";
 
 @NgModule({
   declarations: [
@@ -22,12 +23,15 @@ import { HomeComponent } from './home/home.component';
     HomeComponent
   ],
   imports: [
+    PopoverModule.forRoot(),
+    AlertModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ModalModule.forRoot(),
     FormsModule,
     UiModule,
-    HotelManagementModule,
+    HotelManagementModule
   ],
   providers: [CustomerService],
   bootstrap: [AppComponent]

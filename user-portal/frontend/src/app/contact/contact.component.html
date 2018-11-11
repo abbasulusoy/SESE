@@ -1,3 +1,25 @@
-<p>
-  contact works!
-</p>
+<div class="col-md-6">
+  <h2 class="text-center">Add Customer</h2>
+  <form>
+    <div class="form-group">
+      <label for="firstName">Name:</label>
+      <input [(ngModel)]="customer.firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email address:</label>
+      <input type="email" [(ngModel)]="customer.email" placeholder="Email" name="email" class="form-control" id="email">
+    </div>
+
+    <div class="form-group">
+      <label for="Telefonnummer">Telefonnummer:</label>
+      <input type="number" [(ngModel)]="customer.telefonnummer" placeholder="Telefonnummer" name="telefonnummer" class="form-control" id="telefonnummer">
+    </div>
+
+    <div class="form-group">
+      <label for="notiz">Notiz:</label>
+      <textarea [(ngModel)]="customer.notiz" placeholder="Notiz" name="notiz" class="form-control" id="notiz"></textarea>
+    </div>
+    <button class="btn btn-success" (click)="createContact()"  >Create</button>
+  </form>
+</div>

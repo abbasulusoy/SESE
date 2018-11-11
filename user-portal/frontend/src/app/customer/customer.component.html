@@ -17,7 +17,16 @@
     <td>{{customer.firstName}}</td>
     <td>{{customer.lastName}}</td>
     <td>{{customer.email}}</td>
-    <td><button class="btn btn-danger" (click)="deleteCustomer(customer)"> Delete Customer</button></td>
+    <td>
+      <button type="button" class="close" aria-label="Close" (click)="deleteCustomer(customer)">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </td>
+    <td>
+      <button type="button" class="btn btn-info" (click)="detailCustomer(customer)">
+        <span class="glyphicon glyphicon-info"></span> details
+      </button>
+    </td>
   </tr>
   </tbody>
 </table>

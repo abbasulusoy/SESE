@@ -18,9 +18,14 @@ export class AddCustomerComponent {
   createCustomer(): void {
     this.customerService.createCustomer(this.customer)
         .subscribe( data => {
-          alert("Customer created successfully.");
+          this.gotoCustomers();
+          alert('Customer created successfully.');
         });
 
   };
+
+  gotoCustomers() {
+    this.router.navigate(['/customers']);
+  }
 
 }

@@ -13,7 +13,7 @@ export class CustomerService {
 
   constructor(private http:HttpClient) {}
 
-  private customerUrl = 'http://localhost:8080/portal/customers';
+  private customerUrl = 'http://localhost:8080/customers';
   //private customerUrl = '/api';
 
   public getCustomers() {
@@ -21,11 +21,18 @@ export class CustomerService {
   }
 
   public deleteCustomer(customer) {
-    return this.http.delete(this.customerUrl + "/"+ customer.id);
+    return this.http.delete(this.customerUrl + '/' + customer.id);
   }
 
   public createCustomer(customer) {
     return this.http.post<Customer>(this.customerUrl, customer);
   }
 
+  public getCustomer(customer) {
+    return this.http.get<Customer>(this.customerUrl + '/' + customer.id);
+  }
+
+  public updateCustomer(customer) {
+    return this.http.put<Customer>(this.customerUrl + '/' + customer.id , customer);
+  }
 }

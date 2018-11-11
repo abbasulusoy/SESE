@@ -1,3 +1,3 @@
 language: java
-install: (cd user-portal && ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V)
-script: (cd user-portal && ./mvnw install)
+install: true
+script: (cd user-portal && mvn install)

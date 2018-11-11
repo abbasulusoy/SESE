@@ -1,3 +1,19 @@
-<p>
-  room-list-item works!
-</p>
+<div class="row room-list-item">
+  <div class="col-lg-3">
+    <img class="card-img-top room-list-item-picture" src="{{room.mainPicture}}" alt="Card image cap">
+  </div>
+  <div class="col-lg-3 room-list-item-details">
+    <h4>{{room.name}}</h4>
+    <h5>{{room.type}}</h5>
+    <span class="room-capacity">max {{room.capacity}} Personen</span>
+  </div>
+  <div class="col-lg-4">
+    {{room.description}}
+  </div>
+  <div class="col-lg-2 room-list-item-details">
+    <h5 class="room-list-item-price">{{room.price | currency:'EUR'}}</h5>
+    <button type="button" class="btn btn-success room-list-item-reserve" (click)="onReserveRoom(room.id)">
+      Reservieren
+    </button>
+  </div>
+</div>

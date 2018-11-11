@@ -1,3 +1,3 @@
-<p>
-  room-list works!
-</p>
+<div *ngFor="let room of availableRooms">
+  <room-list-item [room]="room"></room-list-item>
+</div>

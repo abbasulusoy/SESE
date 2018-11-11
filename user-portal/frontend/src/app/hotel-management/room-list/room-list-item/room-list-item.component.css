@@ -1,0 +1,28 @@
+.room-list-item {
+  border: solid 2px #868E95;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.room-list-item:hover {
+  background-color: #acb4bb
+}
+.room-list-item-picture {
+  padding: 10px 0;
+}
+.room-list-item-details {
+  position: relative;
+}
+.room-capacity{
+  position: absolute;
+  bottom: 0;
+}
+.room-list-item-price{
+  position: absolute;
+  color: #660000;
+  right: 0;
+}
+.room-list-item-reserve{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

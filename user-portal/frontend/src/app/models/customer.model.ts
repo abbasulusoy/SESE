@@ -1,6 +1,6 @@
-import {Address} from './address.model';
-import {Room} from "../hotel-management/room-list/models/room";
-import {Reservation} from "./reservation.model";
+// import {Address} from './address.model';
+// import {Room} from "../hotel-management/room-list/models/room";
+// import {Reservation} from "./reservation.model";
 
 export class Customer {
 
@@ -15,7 +15,7 @@ export class Customer {
   geburtsdatum: string;
   notiz: string;
   firmenname: string;
-  address: Address;
-  room: Room;
-  reservations: Reservation[];
+  // address: Address;
+  // room: Room;
+  // reservations: Reservation[];
 }

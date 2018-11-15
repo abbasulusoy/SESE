@@ -6,6 +6,8 @@ import {RoomDetailComponent} from './room-detail/room-detail.component';
 import {CustomerListComponent} from './customer-list/customer-list.component';
 import {CustomerDetailComponent} from './customer-detail/customer-detail.component';
 import {RouterModule, Routes} from "@angular/router";
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 const routes: Routes = [
   { path: 'roomlist', component: RoomListComponent },
@@ -28,6 +30,9 @@ export const managementRouting = RouterModule.forChild(routes);
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule.forRoot(),
     managementRouting
   ]
 })

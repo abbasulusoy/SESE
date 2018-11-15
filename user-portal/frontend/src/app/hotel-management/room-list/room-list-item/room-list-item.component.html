@@ -12,8 +12,92 @@
   </div>
   <div class="col-lg-2 room-list-item-details">
     <h5 class="room-list-item-price">{{room.price | currency:'EUR'}}</h5>
-    <button type="button" class="btn btn-success room-list-item-reserve" (click)="$event.stopPropagation();onReserveRoom(room.id)">
+    <button type="button" class="btn btn-success room-list-item-reserve"
+            (click)="$event.stopPropagation();open(content)">
       Reservieren
     </button>
   </div>
 </div>
+
+<ng-template #content let-d="dismiss" let-c="close">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Zimmer '{{room.name}}' reservieren</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="reservationForm" (ngSubmit)="onReserveRoom(room)">
+      <div class="form-group row">
+        <label for="name" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+          <input type="name"
+                 class="form-control"
+                 id="name"
+                 placeholder="Kundenname"
+                 formControlName="customerName">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="email" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="email"
+                 class="form-control"
+                 id="email"
+                 placeholder="max.mustermann@mail.com"
+                 formControlName="customerEmail">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="dateOfBirth" class="col-sm-2 col-form-label">Geburtsdatum</label>
+        <div class="input-group col-sm-10">
+          <input id="dateOfBirth"
+                 class="form-control"
+                 placeholder="yyyy-mm-dd"
+                 name="dp"
+                 ngbDatepicker
+                 #dp="ngbDatepicker"
+                 formControlName="customerDateOfBirth">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="fromDate" class="col-sm-2 col-form-label">Anreise</label>
+        <div class="input-group col-sm-10">
+          <input id="fromDate"
+                 class="form-control"
+                 placeholder="yyyy-mm-dd"
+                 name="fromDateDp"
+                 ngbDatepicker
+                 #fromDateDp="ngbDatepicker"
+                 formControlName="fromDate">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary calendar" (click)="fromDateDp.toggle()" type="button"></button>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="toDate" class="col-sm-2 col-form-label">Abreise</label>
+        <div class="input-group col-sm-10">
+          <input id="toDate"
+                 class="form-control"
+                 placeholder="yyyy-mm-dd"
+                 name="toDateDp"
+                 ngbDatepicker
+                 #toDateDp="ngbDatepicker"
+                 formControlName="toDate">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary calendar" (click)="toDateDp.toggle()" type="button"></button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline" (click)="d()">Abrechen</button>
+    <button type="button" class="btn btn-primary" (click)="c(room)"
+    [attr.disabled]="reservationForm.valid ? null : ''" >Reservieren</button>
+  </div>
+</ng-template>
